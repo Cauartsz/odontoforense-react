@@ -4,13 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ThemeProvider } from './screens/Tema';
 
+
 import Home from './screens/Home';
-import Camera from './screens/Camera';
+import Chat from './screens/Chat';
 import Config from './screens/Config';
 import Local from './screens/Local';
 import Storage from './screens/Storage';
 
+
 const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
@@ -18,8 +21,8 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Chat" component={Chat} />
           <Stack.Screen name="Local" component={Local} />
-          <Stack.Screen name="Camera" component={Camera} />
           <Stack.Screen name="Storage" component={Storage} />
           <Stack.Screen name="Config" component={Config} />
         </Stack.Navigator>

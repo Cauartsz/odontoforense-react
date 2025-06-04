@@ -87,11 +87,11 @@ export default function Storage() {
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
             <View style={styles.historyItem}>
-              <Text style={[styles.historyText, { color: textColor }]}>{item.date}</Text>
+              <Text style={[styles.historyText, { color: textColor }]}>{item.date}    </Text>
               <Text style={[styles.historyMood, { color: textColor }]}>{item.mood.emoji} {item.mood.label}</Text>
             </View>
           )}
-          ListEmptyComponent={<Text style={{ marginTop: 10, color: '#999' }}>Nenhum registro ainda.</Text>}/>
+          ListEmptyComponent={<Text style={{ marginTop: 8, color: '#999' }}>Nenhum registro ainda.</Text>}/>
         </View>
 
 
@@ -104,8 +104,8 @@ export default function Storage() {
 
         <TouchableOpacity
           style={[styles.button, { backgroundColor: 'rgb(84, 169, 255)' }]}
-          onPress={() => navigation.navigate('Camera')}>
-          <Image source={require('../assets/camera.png')} style={[styles.icon, { tintColor: '#ffffff' }]} />
+          onPress={() => navigation.navigate('Chat')}>
+          <Image source={require('../assets/chat.png')} style={[styles.icon, { tintColor: '#ffffff' }]} />
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -227,16 +227,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   historyItem: {
-    width: '140%',
+    width: '200%',
     alignItems: 'center',
     paddingVertical: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#000000',
   },
   historyText: {
     alignItems: 'center',
     width: '100%',
-    fontSize: 14,
+    fontSize: 16,
     color: '#555',
   },
   historyMood: {

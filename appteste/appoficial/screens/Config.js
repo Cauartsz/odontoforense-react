@@ -47,8 +47,8 @@ export default function Config() {
 
         <TouchableOpacity
         style={[styles.button, { backgroundColor: 'rgb(84, 169, 255)' }]}
-        onPress={() => navigation.navigate('Camera')}>
-        <Image source={require('../assets/camera.png')} style={[styles.icon, { tintColor: '#ffffff' }]} />
+        onPress={() => navigation.navigate('Chat')}>
+        <Image source={require('../assets/chat.png')} style={[styles.icon, { tintColor: '#ffffff' }]} />
         </TouchableOpacity>
 
         <TouchableOpacity
